@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark"
+      style="background-color: #333"
+    >
+      <div class="container">
+        <a
+          class="navbar-brand"
+          href="#"
+          style="color: #f84464 !important; font-weight: bold"
+          >bookMyshow</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: #fff !important"
+                >Movies</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: #fff !important"
+                >Stream</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: #fff !important"
+                >Events</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: #fff !important"
+                >Plays</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: #fff !important"
+                >Sports</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: #fff !important"
+                >Activities</a
+              >
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              type="search"
+              class="form-control me-2"
+              placeholder="Search for Movies, Events, Plays"
+            />
+            <button class="btn btn-outline-light" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+      <!-- <h1 class="text-center mb-4" id="movieTitle">Indian 2</h1> -->
+      <div id="movieDetails" class="row"></div>
+
+      <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookingModalLabel">Book Tickets</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="bookingForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phoneNumber" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phoneNumber" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="seatCount" class="form-label">How Many Seats ?</label>
+                            <input type="number" class="form-control" id="seatCount" required min="1">
+                        </div>
+                        <input type="hidden" id="modalMovieId">
+                        <input type="hidden" id="modalShowId">
+                        <input type="hidden" id="modalShowDate">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger" id="submitBooking">Book Tickets</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="detail-script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
